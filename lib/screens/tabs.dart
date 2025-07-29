@@ -142,7 +142,7 @@ class _TabsScreenState extends State<TabsScreen> {
     } else if (_selectedPageIndex == 1) {
       activePage = const PresentationListScreen();
       activePageTitle = const Text(
-        "Presentation Materials",
+        "Program Documents",
         style: TextStyle(color: Colors.white),
       );
     } else {
@@ -204,7 +204,7 @@ class _TabsScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.menu_book_outlined),
-            label: "Orientation",
+            label: "Documents",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.schedule),

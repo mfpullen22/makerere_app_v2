@@ -175,14 +175,14 @@ class _PresentationListScreenState extends State<PresentationListScreen> {
                               side: const BorderSide(color: Colors.black),
                             ),
                             elevation: 16,
-                            shadowColor: Colors.red,
+                            shadowColor: Colors.grey,
                             child: ListTile(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              tileColor: Colors.redAccent,
+                              tileColor: Colors.lightBlueAccent,
                               horizontalTitleGap: 20,
-                              textColor: Colors.white,
+                              textColor: Colors.black,
                               iconColor: Colors.white,
                               leading: const Icon(Icons.picture_as_pdf),
                               title: Text(title),

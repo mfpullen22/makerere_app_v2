@@ -130,15 +130,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   _buildSquareButton(
                     context,
-                    "Presentation\nMaterials",
+                    "Lecture Schedules and Documents",
                     buttonSize,
                     () {
                       widget.onNavigate(const PresentationListScreen());
                     },
                   ),
-                  _buildSquareButton(context, "Schedule", buttonSize, () {
-                    widget.onNavigate(const ScheduleScreen());
-                  }),
+                  _buildSquareButton(
+                    context,
+                    "Rotation Schedules",
+                    buttonSize,
+                    () {
+                      widget.onNavigate(const ScheduleScreen());
+                    },
+                  ),
                   if (isStudent)
                     _buildSquareButton(
                       context,
