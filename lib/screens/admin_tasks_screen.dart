@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:makerere_clean/screens/attendance_captain_screen.dart';
+import 'package:makerere_clean/screens/attendance_screen.dart';
 import 'package:makerere_clean/screens/mentorship_meetings_screen.dart';
 import 'package:makerere_clean/screens/student_reviews_screen.dart';
 
@@ -42,7 +43,10 @@ class AdminTasksScreen extends StatelessWidget {
               SizedBox(
                 width: 250,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const AttendanceScreen()),
+                  ),
                   child: const Text('View Attendance'),
                 ),
               ),
