@@ -110,12 +110,12 @@ class _TabsScreenState extends State<TabsScreen> {
       // Determine title and whether we need a back button.
       if (_homeCurrentWidget is HomeScreen) {
         activePageTitle = const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Makerere University", style: TextStyle(color: Colors.white)),
             Text(
-              "Department of Medicine",
+              "Department of Internal Medicine",
               style: TextStyle(color: Colors.white),
             ),
           ],
