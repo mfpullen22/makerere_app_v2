@@ -1,6 +1,7 @@
 import "package:cloud_firestore/cloud_firestore.dart";
 import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
+import "package:makerere_clean/screens/auth.dart";
 import "package:makerere_clean/screens/home.dart";
 import "package:makerere_clean/screens/presentation_list.dart";
 import "package:makerere_clean/screens/schedule.dart";
@@ -56,6 +57,125 @@ class _TabsScreenState extends State<TabsScreen> {
       }
     }
   } */
+
+  void _showAccountDialog() {
+    showDialog(
+      context: context,
+      builder: (ctx) {
+        bool showConfirmDelete = false;
+
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: const Text("Account Options"),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.logout),
+                    label: const Text("Logout"),
+                    onPressed: () async {
+                      Navigator.of(context).pop();
+                      await FirebaseAuth.instance.signOut();
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.delete_forever),
+                    label: const Text("Delete Account"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      setState(() => showConfirmDelete = true);
+                    },
+                  ),
+                  if (showConfirmDelete) ...[
+                    const SizedBox(height: 16),
+                    const Text(
+                      "Are you absolutely sure you want to delete your account?",
+                      style: TextStyle(color: Colors.red),
+                    ),
+                    const SizedBox(height: 8),
+                    ElevatedButton(
+                      onPressed: _deleteAccount,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: const Text("Yes, delete everything"),
+                    ),
+                  ],
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Future<void> _deleteAccount() async {
+    Navigator.of(context).pop(); // Close dialog
+
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    final uid = user.uid;
+
+    try {
+      final userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .get();
+
+      if (userDoc.exists) {
+        final data = userDoc.data();
+        await FirebaseFirestore.instance.collection('archived').doc(uid).set({
+          ...?data,
+          'archivedAt': Timestamp.now(),
+        });
+
+        await FirebaseFirestore.instance.collection('users').doc(uid).delete();
+      }
+
+      // Delete FirebaseAuth user (must be last)
+      await user.delete();
+
+      // Explicit logout for safety (in case user.delete fails silently)
+      await FirebaseAuth.instance.signOut();
+
+      // Navigate back to AuthScreen
+      if (mounted) {
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (_) => const AuthScreen()),
+          (route) => false,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Your account has been deleted.')),
+        );
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'requires-recent-login') {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Please log in again before deleting your account for security.',
+              ),
+            ),
+          );
+        }
+      } else {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Error: ${e.message ?? 'Unknown error.'}')),
+          );
+        }
+      }
+    }
+  }
 
   Future<void> _fetchUserRole() async {
     final user = FirebaseAuth.instance.currentUser;
@@ -181,11 +301,8 @@ class _TabsScreenState extends State<TabsScreen> {
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout),
-            color: Colors.white,
-            onPressed: () {
-              FirebaseAuth.instance.signOut();
-            },
+            icon: const Icon(Icons.person), // 👤 Profile icon
+            onPressed: _showAccountDialog,
           ),
         ],
       ),
