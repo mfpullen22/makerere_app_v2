@@ -1,0 +1,1163 @@
+{
+  "meta": {
+    "format": "JSON",
+    "version": "1.1.0",
+    "projectId": "makerere-app",
+    "resourcePath": ["users"],
+    "recursive": false,
+    "creationTime": 1754598217,
+    "app": "firefoo"
+  },
+  "data": {
+    "0oPvBBTx4qUhzmKLr297": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "1Hf91ZXZhTBoOD5ce0Gc": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "2H4iReZ4tiYoDfWllACh": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "3Rw3CFqJbb1xmiho5hV9": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "3XbAiSJPgSLhRrQzprBv": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "4SxSqS1BjTOEdpTJ2XkT": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "77xOyWQNbtflpnAetQbI": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "7ZLWbhakxgQ9QPIB4PVc": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "9w5kabqrzlnH8pX605A7": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "CZpsrH2zoEqB4wIGKsam": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "Cy0vHUDaHZXzryp11Q8V": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "D2J2Z9zs7nwM3qWFooUJ": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "F2CbqWTX4DUf3Dla8rKS": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "HDOgOZk7AUrR119tADs4": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "HlZAQ4edpqEVqIJ7wrtG": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "HliqGaqkHSZnWd9iZtSL": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "J5VcNcMuhQuUuv8BBbl3": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "KmwvDS26Y4EgWCGuieB4": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "NQYUiCJRCv2ezJqtBQyv": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "NzJ8dL2ze1q3SCY8GvDL": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "PNanpmoQg7sUyBQKtgVZ": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "Q2CgppU6wDvAiipZpP1R": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "QAnw8HNj2mbnqd5WSrBF": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "R0rG1AAQFqgyLDKQ9sT5": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "Slj7sTlCqBgNADZcCV8d": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "UjZU1m3awe3psigW14oQ": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "X4sH0w5kzI7H4xKonLW1": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "a0zm0ZOj5ChQVPQKIGSH": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "a3RqomsxNX3M4FqLhuB0": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "e2cUP4cEbpK9dfLPj0du": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "gncRMMIjiGcBDhiNZ5xO": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "hmdrf3p9t4fl3z4N3z2u": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "hmifTVTkMRd3aZbkn0VB": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "hwGdS059WeXFJgl3djLV": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "iKuhGYroVBuw7JhmVW56": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "iMIr76CRlwBb6z2TcOMU": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "j7SxkGarnOeKC6UoTxgY": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "jNeqg8L6AN366Ib6Zkv3": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "jmHraNu9WhuyDmKXBGZx": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "kJtvnc146LfdwtnPZMK9": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "l7WKAxC6Aoujhu2rlman": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "oSULeNsRv9KP9oJlg6Iy": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "q0yxV9pzHSUgN34hxYz9": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "qKKeVDzDNaXSfYVAjODN": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "qnhqb0seVr8ZhT0YgiK8": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "rpVXFxeGHNIU5x6Ss6tF": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "rzmN5S1LpBWLiuZkkWpf": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "soFrZp70bz4temEP4moX": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "stk4igdl7KzeFFSTOItt": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname": " ",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    },
+    "tBU8fqzBXvoMMmSbhjvL": {
+      "attendance": false,
+      "class": "",
+      "email": "",
+      "firstname":"",
+      "id_token": "",
+      "lastname": "",
+      "reviews": [
+        { "question1": "", "question2": "", "reviewer": "", "timestamp": "" }
+      ],
+      "role": "student",
+      "schedule": {
+        "rotation1": "",
+        "rotation2": "",
+        "rotation3": "",
+        "rotation4": "",
+        "rotation5": "",
+        "rotation6": "",
+        "rotation7": "",
+        "rotation8": ""
+      },
+      "__collections__": {}
+    }
+  }
+}
