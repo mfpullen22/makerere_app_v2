@@ -229,8 +229,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   left: 20,
                   right: 20,
                 ),
-                width: 200,
-                child: Image.asset("assets/images/mak_logo.png"),
+                width: 400,
+                child: Image.asset("assets/images/anniversary_logo.png"),
               ),
               Card(
                 margin: const EdgeInsets.all(20),
