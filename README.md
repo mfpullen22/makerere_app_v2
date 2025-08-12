@@ -1,6 +1,6 @@
 # Makerere University School of Medicine App
 
-![Makerere Anniversary Logo]("../assets/images/anniversary_logo.png")
+![Makerere Anniversary Logo](assets/images/anniversary_logo.png)
 
 This app serves as a central repository of information for students and faculty at Makerere University School of Medicine. Within this app, you'll find lecture schedules, clinical rotation schedules, educational materials, and interactive mentorship meeting, student review, and attendance recording tools. 
 
