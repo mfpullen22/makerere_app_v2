@@ -25,181 +25,218 @@ class _PresentationListScreenState extends State<PresentationListScreen> {
   ) async {
     if (!mounted) return;
 
-    setState(() {
-      _isLoading = true;
-    });
+    setState(() => _isLoading = true);
 
     try {
       final dir = await getApplicationDocumentsDirectory();
       final filePath = '${dir.path}/$fileName';
       final localFile = File(filePath);
 
-      // Debugging file existence
-
-      // Download the file if it doesn't exist
-      if (!localFile.existsSync()) {
+      // If file is missing or zero-length, (re)download
+      if (!localFile.existsSync() || localFile.lengthSync() == 0) {
+        if (localFile.existsSync() && localFile.lengthSync() == 0) {
+          // clean up bad cache file
+          localFile.deleteSync();
+        }
         await _downloadPDF(storageUrl, localFile);
       }
 
-      // Confirm the file is valid before navigation
+      // Validate again after download
       if (!localFile.existsSync() || localFile.lengthSync() == 0) {
         throw Exception("File is missing or invalid after download.");
       }
 
-      // Navigate to the PDF viewer
       navigatorKey.currentState?.push(
         MaterialPageRoute(builder: (_) => PDFScreen(path: filePath)),
       );
     } catch (e) {
-      // Show error message using the global scaffold messenger
       scaffoldMessengerKey.currentState?.showSnackBar(
         SnackBar(content: Text('Failed to open PDF: $e')),
       );
     } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
+      if (mounted) setState(() => _isLoading = false);
     }
   }
 
   Future<void> _downloadPDF(String storageUrl, File localFile) async {
     try {
+      // Ensure parent dir exists
       final dir = localFile.parent;
-
-      // Ensure the directory exists
       if (!dir.existsSync()) {
         dir.createSync(recursive: true);
       }
 
-      // Ensure the file is explicitly created
-      if (!localFile.existsSync()) {
-        localFile.createSync();
-      }
-
+      // Stream the file directly to disk (avoids memory blow-ups)
       final ref = FirebaseStorage.instance.refFromURL(storageUrl);
-      final bytes = await ref.getData();
+      final downloadTask = ref.writeToFile(localFile);
 
-      if (bytes == null || bytes.isEmpty) {
-        throw Exception("Failed to download PDF or received empty data.");
+      // Optionally, listen for progress:
+      // downloadTask.snapshotEvents.listen((taskSnapshot) {
+      //   // You can surface progress if you want
+      // });
+
+      await downloadTask;
+
+      // Sanity check
+      if (!localFile.existsSync() || localFile.lengthSync() == 0) {
+        // Clean up any bad file and error out
+        if (localFile.existsSync()) {
+          localFile.deleteSync();
+        }
+        throw Exception("Downloaded file is empty.");
       }
-
-      await localFile.writeAsBytes(bytes, flush: true);
     } on FileSystemException catch (e) {
+      // Clean up on failures
+      if (localFile.existsSync() && localFile.lengthSync() == 0) {
+        localFile.deleteSync();
+      }
       throw Exception("Failed to write PDF to local storage: ${e.message}");
     } catch (e) {
+      if (localFile.existsSync() && localFile.lengthSync() == 0) {
+        localFile.deleteSync();
+      }
       throw Exception("Download failed: $e");
     }
-  }
-
-  Future<Uint8List> _fetchPDFBytes(String storageUrl) async {
-    final ref = FirebaseStorage.instance.refFromURL(storageUrl);
-    final bytes = await ref.getData();
-    if (bytes == null) {
-      throw Exception("Failed to download PDF from Firebase Storage.");
-    }
-    return bytes;
   }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Center(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Text(
-                  "Tap a presentation to view the PDF",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
+        Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+              child: Text(
+                "Tap a presentation to view the PDF",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
                 ),
-                SizedBox(
-                  height: 600,
-                  child: StreamBuilder<QuerySnapshot>(
-                    stream: FirebaseFirestore.instance
-                        .collection('presentations')
-                        .snapshots(),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
-                      }
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Expanded(
+              child: StreamBuilder<QuerySnapshot>(
+                stream: FirebaseFirestore.instance
+                    .collection('presentations')
+                    .snapshots(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
 
-                      if (snapshot.hasError) {
-                        return Center(
-                          child: Text(
-                            'Error: ${snapshot.error}',
-                            style: const TextStyle(color: Colors.black),
-                          ),
-                        );
-                      }
+                  if (snapshot.hasError) {
+                    return Center(
+                      child: Text(
+                        'Error: ${snapshot.error}',
+                        style: const TextStyle(color: Colors.black),
+                      ),
+                    );
+                  }
 
-                      if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                        return const Center(
-                          child: Text(
-                            'No presentations available',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        );
-                      }
+                  if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+                    return const Center(
+                      child: Text(
+                        'No presentations available',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  }
 
-                      // Fetch and sort documents alphabetically by title
-                      final docs = snapshot.data!.docs;
-                      docs.sort((a, b) {
-                        final titleA =
-                            (a.data() as Map<String, dynamic>)['title']
-                                as String;
-                        final titleB =
-                            (b.data() as Map<String, dynamic>)['title']
-                                as String;
-                        return titleA.toLowerCase().compareTo(
-                          titleB.toLowerCase(),
-                        );
-                      });
+                  // Group docs by category, sort categories and items
+                  final docs = snapshot.data!.docs;
 
-                      return ListView.builder(
-                        itemCount: docs.length,
-                        itemBuilder: (context, index) {
-                          final data =
-                              docs[index].data() as Map<String, dynamic>;
-                          final title = data['title'] as String;
-                          final storageUrl = data['url'] as String;
+                  final Map<String, List<QueryDocumentSnapshot>> grouped = {};
+                  for (final d in docs) {
+                    final data = d.data() as Map<String, dynamic>;
+                    final catRaw = (data['category'] as String?)?.trim();
+                    final category = (catRaw == null || catRaw.isEmpty)
+                        ? 'Uncategorized'
+                        : catRaw;
 
-                          return Card(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: const BorderSide(color: Colors.black),
+                    grouped.putIfAbsent(category, () => []).add(d);
+                  }
+
+                  final categories = grouped.keys.toList()
+                    ..sort(
+                      (a, b) => a.toLowerCase().compareTo(b.toLowerCase()),
+                    );
+
+                  // Sort items within each category by title
+                  for (final k in categories) {
+                    grouped[k]!.sort((a, b) {
+                      final da = a.data() as Map<String, dynamic>;
+                      final db = b.data() as Map<String, dynamic>;
+                      final ta = (da['title'] as String?) ?? '';
+                      final tb = (db['title'] as String?) ?? '';
+                      return ta.toLowerCase().compareTo(tb.toLowerCase());
+                    });
+                  }
+
+                  return ListView.builder(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12.0,
+                      vertical: 8.0,
+                    ),
+                    itemCount: categories.length,
+                    itemBuilder: (context, idx) {
+                      final category = categories[idx];
+                      final items = grouped[category]!;
+
+                      return Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: const BorderSide(color: Colors.black12),
+                        ),
+                        elevation: 4,
+                        child: Theme(
+                          // Make the expansion tile chevron consistent with your app theme if desired
+                          data: Theme.of(
+                            context,
+                          ).copyWith(dividerColor: Colors.transparent),
+                          child: ExpansionTile(
+                            tilePadding: const EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                              vertical: 2.0,
                             ),
-                            elevation: 16,
-                            shadowColor: Colors.grey,
-                            child: ListTile(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
+                            title: Text(
+                              category,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
                               ),
-                              tileColor: Colors.lightBlueAccent,
-                              horizontalTitleGap: 20,
-                              textColor: Colors.black,
-                              iconColor: Colors.white,
-                              leading: const Icon(Icons.picture_as_pdf),
-                              title: Text(title),
-                              onTap: () {
-                                openPDF(context, storageUrl, '$title.pdf');
-                              },
                             ),
-                          );
-                        },
+                            children: items.map((doc) {
+                              final data = doc.data() as Map<String, dynamic>;
+                              final title =
+                                  (data['title'] as String?) ?? 'Untitled';
+                              final storageUrl = data['url'] as String;
+
+                              return ListTile(
+                                leading: const Icon(Icons.picture_as_pdf),
+                                title: Text(title),
+                                trailing: const Icon(Icons.chevron_right),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                onTap: () {
+                                  // safer, unique filename
+                                  openPDF(context, storageUrl, '${doc.id}.pdf');
+                                },
+                              );
+                            }).toList(),
+                          ),
+                        ),
                       );
                     },
-                  ),
-                ),
-              ],
+                  );
+                },
+              ),
             ),
-          ),
+          ],
         ),
+
         if (_isLoading)
           Container(
             color: Colors.black.withValues(alpha: 0.5),
@@ -209,6 +246,7 @@ class _PresentationListScreenState extends State<PresentationListScreen> {
     );
   }
 }
+
 
 
 
